@@ -22,3 +22,9 @@ repositories {
 
 task stage(dependsOn: ['build', 'clean'])
 build.mustRunAfter clean
+
+jar {
+	manifest {
+        attributes 'Main-Class': 'webrtc.Application'
+    }
+}
