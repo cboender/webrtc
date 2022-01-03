@@ -1,1 +1,1 @@
-worker: java -jar target/webrtc.jar
+web: java -jar target/webrtc.jar
