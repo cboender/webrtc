@@ -1,1 +1,1 @@
-web: java -jar target/webrtc.jar
+web: java -jar build/libs/webrtc.jar
