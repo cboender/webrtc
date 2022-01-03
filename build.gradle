@@ -18,5 +18,5 @@ repositories {
     mavenCentral()
 }
 
-task jarApplication(type: Jar) {
+task stage(dependsOn: ['build', 'clean']) {
 }
