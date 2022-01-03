@@ -11,8 +11,6 @@ plugins {
     id 'java'
 }
 
-version = '0.5'
-
 dependencies {
 }
 
