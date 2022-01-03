@@ -6,10 +6,6 @@
  * user guide available at https://docs.gradle.org/4.10.2/userguide/java_library_plugin.html
  */
 
-plugins {
-    // Apply the java-library plugin to add support for Java Library
-    id 'java-library'
-}
 
 version = '0.5'
 
