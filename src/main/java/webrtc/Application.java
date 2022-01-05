@@ -16,7 +16,12 @@ public class Application {
 	}
 
 	public void start() throws IOException {
-		server = HttpServer.create(new InetSocketAddress(8080), 0);
+		String sPort = System.getenv("PORT");
+		int port = 8080;
+		if (sPort != null) {
+			port = Integer.parseInt(sPort);
+		}
+		server = HttpServer.create(new InetSocketAddress(port), 0);
 		server.createContext("/app", new RequestHandler());
 		server.start();
 	}
