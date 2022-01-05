@@ -21,8 +21,9 @@ public class Application {
 		if (sPort != null) {
 			port = Integer.parseInt(sPort);
 		}
+		System.out.println(port);
 		server = HttpServer.create(new InetSocketAddress(port), 0);
-		server.createContext("/app", new RequestHandler());
+		server.createContext("/", new RequestHandler());
 		server.start();
 	}
 }
