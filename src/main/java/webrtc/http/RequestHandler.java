@@ -20,7 +20,7 @@ public class RequestHandler implements HttpHandler {
 		}
 		File file = new File(rootFile, url);
 		String response = new String(Files.readAllBytes(file.toPath()));
-		t.sendResponseHeaders(200, response.length());
+		t.sendResponseHeaders(200, response.getBytes().length);
 		OutputStream os = t.getResponseBody();
 
 		os.write(response.getBytes());
