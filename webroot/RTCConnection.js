@@ -44,9 +44,14 @@ class Connection {
 	
 	createConnection() {
 		var $this = this;
-		var servers = null;
+		var config = {
+				iceServers : [{
+					urls : ["stun:stun.l.google.com:19302"]
+				}],
+				iceTransportPolicy : "all"
+		};
 		var dataConstraint = null;
-		this.con = new RTCPeerConnection(servers);
+		this.con = new RTCPeerConnection(config);
 		this.candidates = [];
 		//TODO enhance. Will handle auto reconnect
 		function onReceiveChannelStateChange(channel) {
